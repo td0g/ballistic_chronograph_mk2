@@ -1,0 +1,9 @@
+Input Voltage: 2.0 - 6.0 volts
+Input Current: TBD, ~20 - 50 mA
+Signal: Vin normal, 0V when light reduction is detected
+Pinout: GND   Vin   SIGNAL
+
+Sensitivity adjustment:
+Each photodiode's sensitivity can be adjusted individually
+Using a multimeter set to millivolts, place the leads on the test pads
+Turn the potentiometer to adjust senstivity.  Larger voltage = less sensitive.
