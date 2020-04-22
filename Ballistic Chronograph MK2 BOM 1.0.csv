@@ -1,5 +1,5 @@
 Notes,,,,,,,
-,"Digikey is my preferred electronics vendor (Good prices, cheapest shipping, ships from Winnipeg) ",,,,,,
+,"Digikey is my preferred electronics vendor (Good prices, cheapest shipping, ships from Winnipeg) ",,,,,Last updated 2020-04-22,
 ,Mouser and others are good as well.  Same with eBay/Alibaba/Bangood.,,,,,,
 ,Spool3D is my preferred hardware vendor,,,,,,
 ,,,,,,,
@@ -9,19 +9,20 @@ Part#,Manufacturer Model,Description,Qty (Single / Double Sensor Height),Suggest
 2,LG0,Light Gate Sensors,2 / 4,Tindie,,$17.70,tindie.com
 3,Arduino Uno,Arduino,1,Amazon,,$14.00,https://www.amazon.ca/Arduino-Development-Microcontroller-Atmega328p-Straight/dp/B07M87FYPD/ref=sr_1_2_sspa?keywords=arduino+uno&qid=1587568772&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFYR09HODg3TVQ2UEkmZW5jcnlwdGVkSWQ9QTA4MDA1NzYxUkE0NlZTU0tSRUVVJmVuY3J5cHRlZEFkSWQ9QTAxNjMwMTA4OU9MN0FXM0tYWVQmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl
 4,LCD Keypad Shield,Arduino UI Shield,1,Amazon,,$11.20,https://www.amazon.ca/SODIAL-Keypad-Shield-Backlight-Arduino/dp/B00OPO2W6M/ref=sr_1_1?keywords=lcd+keypad+shield&qid=1587568710&sr=8-1
-5,2020 Aluminum Extrusion,,~1m,Spool3D,,$12.00,https://spool3d.ca/2020-aluminum-extrusion/
-6,PLA,3D print material,~0.5kg,Spool3D,,$15.00,https://spool3d.ca
-7,M2 x 6mm Screws,,7,,,-,
-8,M2 x 8mm Screws,,4 / 8,,,-,
-9,M2 x 12mm Screws,,4,,,-,
-10,M3 x 8mm Screws,,4,,,-,
-11,M4 x 8mm,,2,,,-,
-12,M4 x 10mm Screws,,2,,,-,
-13,M4 x 12mm Screws,,8,,,-,
-14,M4 T-Slot Nuts,,12,,,-,
-15,Prototyping Female-Female Jumper Wires,,10,,,-,
-16,22-Gauge Wire,,~3m,,,-,
-17,"LED Current Limiting Resistors (Please see assembly manual, appendix A)",,,,,-,
+5,2020 Aluminum Extrusion,,~1m (depending on your desired size),Spool3D,,$12.00,https://spool3d.ca/2020-aluminum-extrusion/
+6,PLA Plus / PETG Filament,3D print material,~0.5kg,Spool3D,,$15.00,https://spool3d.ca
+7,M2 x 6mm Screws,Fasteners,7,,,-,
+8,M2 x 8mm Screws,Fasteners,4 / 8,,,-,
+9,M2 x 10mm Screws,Fasteners,2 / 4,,,-,
+10,M2 x 12mm Screws,Fasteners,4,,,-,
+11,M3 x 8mm Screws,Fasteners,4,,,-,
+12,M4 x 8mm,Fasteners,2,,,-,
+13,M4 x 10mm Screws,Fasteners,2,,,-,
+14,M4 x 12mm Screws,Fasteners,8,,,-,
+15,M4 T-Slot Nuts,Fasteners,12,,,-,
+16,Prototyping Female-Female Jumper Wires,Wiring,10,,,-,
+17,22-Gauge Wire,Wiring,~3m,,,-,
+18,"LED Current Limiting Resistors (Please see assembly manual, appendix A)",,,,,-,
 ,,,,,,,
 ,,,,,,,
 ,,,,,Total Price (Single Sensor Height),$95.92,CAD
