@@ -15,13 +15,11 @@ The PCB design for the sensors used in the chronograph.
 * Sensor Height: Single or Double
 * Sensor Width: 125mm or 100mm
 
-### BallistiChronographBasic
+### Firmware
 
-Arduino firmware for basic use.
+* BallistiChronographBasic - Arduino firmware for basic use.
 
-### BallisticChronographLCD
-
-Arduino firmware for the ballistic chronograph if you are using an LCD keypad.
+* BallisticChronographLCD - Arduino firmware for the ballistic chronograph if you are using an LCD keypad.
 
 ### Assembly Manual
 
