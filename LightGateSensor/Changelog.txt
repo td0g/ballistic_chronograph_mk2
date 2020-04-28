@@ -1,0 +1,10 @@
+Rev 1
+	Port to KiCad
+
+Rev 2
+	Added inductor to boost converter outyput
+	Boost converter inductor changed to 4.7uH
+	Biasing caps changed to 1uF
+
+Rev 3
+	Corrected GND/SIG labels on top layer
