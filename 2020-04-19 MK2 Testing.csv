@@ -1,60 +1,59 @@
-all units in m/s,,,,
-TEST,MK1,MK2,Error,Notes
-TEST SET 1 (CO2 Airsoft Pistol),,,,
-1,104.81,107.33,2.40%,
-2,104.11,106.63,2.42%,
-3,106.04,108.3,2.13%,
-4,102.23,104.34,2.06%,
-5,102.15,104.48,2.28%,
-6,105.75,107.99,2.12%,
-7,108.94,111.48,2.33%,
-8,106.21,108.79,2.43%,
-9,106.15,108.34,2.06%,
-10,101.68,103.91,2.19%,
-,,,,
-"TEST SET 2 (CO2 Airsoft Pistol, Chronographs Swapped)",,,,
-1,108.75,103.62,-4.72%,Chronographs swapped (MK1 then MK2)
-2,107.45,102.3,-4.79%,Chronographs swapped (MK1 then MK2)
-3,105.8,100.8,-4.73%,Chronographs swapped (MK1 then MK2)
-4,110.02,104.96,-4.60%,Chronographs swapped (MK1 then MK2)
-5,111.19,105.96,-4.70%,Chronographs swapped (MK1 then MK2)
-6,111.25,106,-4.72%,Chronographs swapped (MK1 then MK2)
-7,110.33,105.06,-4.78%,Chronographs swapped (MK1 then MK2)
-8,111.07,105.64,-4.89%,Chronographs swapped (MK1 then MK2)
-9,108.28,102.94,-4.93%,Chronographs swapped (MK1 then MK2)
-10,114.21,108.62,-4.89%,Chronographs swapped (MK1 then MK2)
-,,,,
-"TEST SET 3 (0.177 Pellet Rifle, Break Action)",,,,
-1,154.3,153.05,-0.81%,
-2,154.97,153.2,-1.14%,
-3,153.73,152.51,-0.79%,
-4,159.52,157.88,-1.03%,
-5,155.01,153.33,-1.08%,
-6,,156.12,,Chronographs swapped (MK1 then MK2) // MK1 failed to capture projectile
-7,158.33,155.27,-1.93%,Chronographs swapped (MK1 then MK2)
-8,152.95,149.66,-2.15%,Chronographs swapped (MK1 then MK2)
-9,156.84,153.66,-2.03%,Chronographs swapped (MK1 then MK2)
-10,159.11,155.87,-2.04%,Chronographs swapped (MK1 then MK2)
-11,159.06,156.15,-1.83%,Chronographs swapped (MK1 then MK2)
-,,,,
-TEST SET 4 (.22 LR),,,,
-1,359.45,,,MK2 failed to capture projectile
-2,367,,,MK2 failed to capture projectile
-3,361.93,363.04,0.31%,
-4,,365.45,,MK1 failed to capture projectile
-5,362.98,361.33,-0.45%,
-6,372.44,367.72,-1.27%,
-7,361.66,357.97,-1.02%,
-8,361.4,,,MK2 failed to capture projectile
-9,358.68,354.51,-1.16%,
-10,343.52,340.54,-0.87%,
-,,,,
-TEST SET 5 (.270 Winchester),,,,
-1,875.66,868.09,-0.86%,
-2,867.3,,,MK2 failed to capture projectile
-3,871.84,860.34,-1.32%,
-,,,,
-TEST SET 6 (65 Creedmoor),,,,
-1,819.67,810.53,-1.12%,
-2,813.67,805.44,-1.01%,
-3,811.69,805.44,-0.77%,
+TEST,MK1,MK1 (Adjusted for Clock Error),MK2,Error,Notes
+TEST SET 1 (CO2 Airsoft Pistol),,,,,
+1,104.81,102.96,107.33,4.25%,
+2,104.11,102.27,106.63,4.26%,
+3,106.04,104.17,108.3,3.97%,
+4,102.23,100.42,104.34,3.90%,
+5,102.15,100.34,104.48,4.12%,
+6,105.75,103.88,107.99,3.96%,
+7,108.94,107.01,111.48,4.17%,
+8,106.21,104.33,108.79,4.27%,
+9,106.15,104.27,108.34,3.90%,
+10,101.68,99.88,103.91,4.03%,
+,,,,,
+"TEST SET 2 (CO2 Airsoft Pistol, Chronographs Swapped)",,,,,
+1,108.75,106.83,103.62,-3.00%,Chronographs swapped (MK1 then MK2)
+2,107.45,105.55,102.3,-3.08%,Chronographs swapped (MK1 then MK2)
+3,105.8,103.93,100.8,-3.01%,Chronographs swapped (MK1 then MK2)
+4,110.02,108.07,104.96,-2.88%,Chronographs swapped (MK1 then MK2)
+5,111.19,109.22,105.96,-2.99%,Chronographs swapped (MK1 then MK2)
+6,111.25,109.28,106,-3.00%,Chronographs swapped (MK1 then MK2)
+7,110.33,108.38,105.06,-3.06%,Chronographs swapped (MK1 then MK2)
+8,111.07,109.11,105.64,-3.18%,Chronographs swapped (MK1 then MK2)
+9,108.28,106.37,102.94,-3.22%,Chronographs swapped (MK1 then MK2)
+10,114.21,112.19,108.62,-3.18%,Chronographs swapped (MK1 then MK2)
+,,,,,
+"TEST SET 3 (0.177 Pellet Rifle, Break Action)",,,,,
+1,154.3,151.57,153.05,0.98%,
+2,154.97,152.23,153.2,0.64%,
+3,153.73,151.01,152.51,0.99%,
+4,159.52,156.70,157.88,0.75%,
+5,155.01,152.27,153.33,0.70%,
+6,,,156.12,,Chronographs swapped (MK1 then MK2) // MK1 failed to capture projectile
+7,158.33,155.53,155.27,-0.17%,Chronographs swapped (MK1 then MK2)
+8,152.95,150.25,149.66,-0.39%,Chronographs swapped (MK1 then MK2)
+9,156.84,154.07,153.66,-0.26%,Chronographs swapped (MK1 then MK2)
+10,159.11,156.30,155.87,-0.27%,Chronographs swapped (MK1 then MK2)
+11,159.06,156.25,156.15,-0.06%,Chronographs swapped (MK1 then MK2)
+,,,,,
+TEST SET 4 (.22 LR),,,,,
+1,359.45,353.09,,,MK2 failed to capture projectile
+2,367,360.51,,,MK2 failed to capture projectile
+3,361.93,355.53,363.04,2.11%,
+4,,,365.45,,MK1 failed to capture projectile
+5,362.98,356.56,361.33,1.34%,
+6,372.44,365.85,367.72,0.51%,
+7,361.66,355.27,357.97,0.76%,
+8,361.4,355.01,,,MK2 failed to capture projectile
+9,358.68,352.34,354.51,0.62%,
+10,343.52,337.45,340.54,0.92%,
+,,,,,
+TEST SET 5 (.270 Winchester),,,,,
+1,875.66,860.18,868.09,0.92%,
+2,867.3,851.96,,,MK2 failed to capture projectile
+3,871.84,856.42,860.34,0.46%,
+,,,,,
+TEST SET 6 (65 Creedmoor),,,,,
+1,819.67,805.18,810.53,0.66%,
+2,813.67,799.28,805.44,0.77%,
+3,811.69,797.34,805.44,1.02%,
