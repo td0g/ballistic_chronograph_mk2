@@ -191,6 +191,9 @@ void metronome(){
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print(clockRate);
+  lcd.setCursor(0, 1);
+  lcd.print(GATE_SEPARATION);
+  lcd.print(" mm");
   delay(750);
   while (_exit){
     digitalWrite(backlightPin, 0);

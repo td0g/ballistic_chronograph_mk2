@@ -49,7 +49,7 @@ void getButton(){
             digitalWrite(backlightPin, 0);
             doTest(menuPosition);
             float _s = testSpeed();
-            _s = _s * clockRate / 1000;
+            _s = _s * 1000 / clockRate;
             timer2.revert_to_normal();
             digitalWrite(backlightPin, backlightOn);
             timer2.setup();
@@ -58,8 +58,8 @@ void getButton(){
           else if (_btn == PRESSED_SELECT){
             timer2.revert_to_normal();
             lcd.setCursor(0, 1);
-            if (!menuPosition) lcd.print(testAB() * clockRate / 1000);
-            else lcd.print(testBA() * clockRate / 1000);
+            if (!menuPosition) lcd.print(testAB() * 1000 / clockRate);
+            else lcd.print(testBA() * 1000 / clockRate);
             timer2.setup();
           }
         break;
