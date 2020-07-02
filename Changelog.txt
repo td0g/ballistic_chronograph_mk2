@@ -1,6 +1,9 @@
-1.0
+Rev0
 	Initial Release
-1.1
+Rev 1
 	Adjusted design to use the same length fasteners for each size (8mm M2, 8mm M3, 10mm M4)
 	Angled top and bottom photodiodes and LED's slightly for better signal
 	Improved the Double-Height sensor door
+	
+Rev2
+	Changed double-height models to allow light from bottom LED's to reach top photodiodes (and vice versa)
