@@ -12,7 +12,7 @@ CHANGELOG:
 1.0
   2020-07-04
   Initial Release
-2.0
+1.1
   2020-07-16
   Using watchdog timer for timeout function, this improves sampling speed
   Added individual gate separation override
