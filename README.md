@@ -11,8 +11,11 @@ The PCB design for the sensors used in the chronograph.
 ### STL
 
 3D print files for the chronograph.  Make sure to print the correct files as there are options:
+
 * Slit Width: 2mm or 3mm
+
 * Sensor Height: Single or Double
+
 * Sensor Width: 125mm or 100mm
 
 ### Arduino Firmware
@@ -21,7 +24,7 @@ The PCB design for the sensors used in the chronograph.
 
 * BallistiChronographCompound - Allows up to 6 sensors, Serial connection only.
 
-* BallisticChronographLCD - Standalone firmware for Arduino with an LCD keypad shield.
+* BallisticChronographLCD - Standalone firmware with flash triggering capability for Arduino with an LCD keypad shield.
 
 ### Assembly Manual
 
