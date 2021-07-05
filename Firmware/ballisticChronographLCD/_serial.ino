@@ -1,10 +1,11 @@
 
+#define MAX_BUF 64 // What is the longest message Arduino can store?
 
 void processCommand(){
-  if (serialBuffer[0] == 'b') {backlightOn = parseNumber('b',1 - backlightOn);digitalWrite(backlightPin, backlightOn);}
+  if (serialBuffer[0] == 'b') {backlightOn = parseNumber('b',1 - backlightOn);analogWrite(backlightPin, backlightPwr);}
   else if (serialBuffer[0] == 'd') {distToTarget = parseNumber('d', 0); Serial.println(distToTarget);}
   else if (serialBuffer[0] == 'f') liveFeed();
-  else if (serialBuffer[0] == 'g') {Serial.println(testAB()); Serial.print(F("Speed in m/s: ")); Serial.println(testSpeed());}
+  //else if (serialBuffer[0] == 'g') {Serial.println(testAB()); Serial.print(F("Speed in m/s: ")); Serial.println(lastTestSpeed());}
   else if (serialBuffer[0] == 'h') printHelp();
   else if (serialBuffer[0] == 'm') {
     camPin = parseNumber('m', 0);
@@ -49,8 +50,6 @@ void processCommand(){
   }
   else if (serialBuffer[0] == 't') triggerNow();
   else if (serialBuffer[0] == 'x'){gunPin = parseNumber('x', 0); Serial.print(F("Gun assigned to pin ")); Serial.println(gunPin);}
-  else if (serialBuffer[0] == 'y'){_bMinTime = 1000000 * GATE_SEPARATION / parseNumber('y', 1); Serial.print(F("Max Time (us)")); Serial.println(_bMinTime);}
-  else if (serialBuffer[0] == 'z'){_bTimeout = parseNumber('z',1000000); Serial.print(F("Timeout (us) ")); Serial.println(_bTimeout);}
   else {
     Serial.println(" Command not recognized");
     Serial.println(sofar);
@@ -78,12 +77,6 @@ void printHelp(){
   Serial.print(F("xXX - Set gun pin (currently "));
   Serial.print(gunPin);
   Serial.println(F(")"));
-  Serial.print(F("yXX - Set minimum speed in m/s (currently "));
-  Serial.print(_bMinTime);
-  Serial.println(F(" us)"));
-  Serial.print(F("zXX - Set test timeout in microseconds (currently "));
-  Serial.print(_bTimeout);
-  Serial.println(F(" us)"));
   Serial.println();
   Serial.print(F("Current triggers: "));
   Serial.println(triggerCount());
