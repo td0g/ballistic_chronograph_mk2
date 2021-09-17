@@ -51,6 +51,7 @@ LICENSE:
   float _timeFactor = 1.0;
   unsigned long _time = 1000;
   unsigned long _adjustedTime = 1000;
+  unsigned long _startTime;
 
 
 
@@ -63,9 +64,22 @@ void setup() {
   Serial.println(F("Then the Arduino will count down until it begins its count"));
   Serial.println(F("Start the stopwatch when the count down reaches 0"));
   Serial.println(F("After some time, you may adjust the clock rate by entering a %"));
-  Serial.println(F("For instance: enter 99.8 to slow down the clock by 0.2%"));
+  Serial.println(F("For instance: enter 't99.8' to slow down the clock by 0.2%"));
   delay(100);
   while (!Serial.available()){};
+  while (Serial.available()) Serial.read();
+  _adjustedTime = millis() + 1000;
+  Serial.print("STARTING in 3...");
+  while (millis() < _adjustedTime){};
+  Serial.print(" 2...");
+  _adjustedTime += 1000;
+  while (millis() < _adjustedTime){};
+  Serial.print(" 1...");
+  _adjustedTime += 1000;
+  while (millis() < _adjustedTime){};
+  Serial.println(" NOW");
+  _time = 0;
+  _startTime = millis();
 }
 
 
@@ -73,9 +87,13 @@ void loop(){
 //Print clock
   if (millis() > _adjustedTime){
     Serial.print(_time / 1000);
-    Serial.print(F(".0 s"));
+    Serial.print(F(".0 s      "));
+    delay(400);
+    Serial.print(F("50ms error = +/- "));
+    Serial.print(5000.0 / _time,4);
+    Serial.println(F("%"));
     _time += 1000;
-    _adjustedTime = _time / _timeFactor;
+    _adjustedTime = _time / _timeFactor + _startTime;
   }
 //Read serial
   if (Serial.available()){
@@ -83,30 +101,41 @@ void loop(){
     if (_c == 10 || _c == 13){  //Newline character
 
     //Read new timefactor
-      serialBuffer[sofar] = 0;
-      _timeFactor = parseNumber('t',_timeFactor);
-      Serial.print(F("New Time Factor: "));
-      Serial.println(_timeFactor);
-      Serial.print(F("Clock Speed: "));
-      Serial.print(_timeFactor * 16);
-      Serial.println(F(" MHz"));
-
-    //Adjust clock
-      _adjustedTime = _time / _timeFactor;
-      while (_adjustedTime > millis()){
-        _time -= 1000;
-        _adjustedTime = _time / _timeFactor;
+      if (serialBuffer[0] != 't'){
+        Serial.println(F("   ERROR - Please enter factor starting with 't'"));
+        Serial.println(F("   eg. 't100.2'"));
+        Serial.println();
+        Serial.print(F("Current Time Factor: "));
+        Serial.println(_timeFactor,4);
+        Serial.print(F("Clock Speed: "));
+        Serial.print(_timeFactor * 16,4);
       }
-      while (_adjustedTime < millis()){
-        _time += 1000;
+      else{
+        serialBuffer[sofar] = 0;
+        _timeFactor = parseNumber('t',_timeFactor * 100) / 100;
+        Serial.print(F("New Time Factor: "));
+        Serial.println(_timeFactor,4);
+        Serial.print(F("Clock Speed: "));
+        Serial.print(_timeFactor * 16,4);
+        Serial.println(F(" MHz"));
+  
+      //Adjust clock
         _adjustedTime = _time / _timeFactor;
+        while (_adjustedTime > millis()){
+          _time -= 1000;
+        _adjustedTime = _time / _timeFactor + _startTime;
+        }
+        while (_adjustedTime < millis()){
+          _time += 1000;
+        _adjustedTime = _time / _timeFactor + _startTime;
+        }
       }
-      sofar = 0;
+        sofar = 0;
     }
 
   //Read serial into buffer
     else {
-      serialBuffer[sofar] = Serial.read();
+      serialBuffer[sofar] = _c;
       sofar++;
     }
   }
